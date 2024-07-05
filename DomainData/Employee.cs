@@ -14,7 +14,7 @@ namespace DomainData
         [StringLength(50, ErrorMessage = "Last name is too long.")]
         public string LastName { get; set; }
 
-        public DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
 
         [Required]
         [EmailAddress]
@@ -38,5 +38,7 @@ namespace DomainData
 
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+
+        public bool IsOnHoliday { get; set; } = false;
     }
 }
